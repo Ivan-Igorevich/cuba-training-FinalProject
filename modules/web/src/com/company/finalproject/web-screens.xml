@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <include file="com/company/finalproject/screens.xml"/>
+    <screen id="sec$User.edit"
+            template="com/company/finalproject/web/screens/ext-user-edit.xml"/>
+    <screen id="finalproject$Country.browse"
+            template="com/company/finalproject/web/country/country-browse.xml"/>
+    <screen id="finalproject$Country.edit"
+            template="com/company/finalproject/web/country/country-edit.xml"/>
+    <screen id="finalproject$AutoProducer.browse"
+            template="com/company/finalproject/web/autoproducer/auto-producer-browse.xml"/>
+    <screen id="finalproject$AutoProducer.edit"
+            template="com/company/finalproject/web/autoproducer/auto-producer-edit.xml"/>
+</screen-config>

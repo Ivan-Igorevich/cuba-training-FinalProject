@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+    <view class="com.company.finalproject.entity.ExtUser"
+          extends="_local"
+          name="extUser-view">
+        <property name="defaultCountry"
+                  view="_minimal">
+            <property name="code"/>
+        </property>
+        <property name="group"
+                  view="group.edit"/>
+        <property name="userRoles"
+                  view="user.edit"/>
+        <property name="substitutions"
+                  view="user.edit"/>
+    </view>
+    <view class="com.company.finalproject.entity.AutoProducer"
+          extends="_minimal"
+          name="autoProducer-view">
+        <property name="country"
+                  view="_minimal">
+            <property name="code"/>
+        </property>
+        <property name="code"/>
+    </view>
+</views>

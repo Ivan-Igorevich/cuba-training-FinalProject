@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.company.finalproject.web.screens.ExtUserEditor"
+        extends="/com/haulmont/cuba/gui/app/security/user/edit/user-edit.xml"
+        messagesPack="com.company.finalproject.web.screens"
+        xmlns:ext="http://schemas.haulmont.com/cuba/window-ext.xsd">
+    <dsContext>
+        <datasource id="userDs" class="com.company.finalproject.entity.ExtUser" view="extUser-view">
+            <collectionDatasource id="rolesDs" property="userRoles"/>
+            <collectionDatasource id="substitutionsDs" property="substitutions"/>
+        </datasource>
+    </dsContext>
+    <layout>
+        <groupBox id="propertiesBox">
+            <grid id="propertiesGrid">
+                <rows>
+                    <row id="propertiesRow">
+                        <fieldGroup id="fieldGroupRight"
+                                    datasource="userDs">
+                            <column>
+                                <field id="group"
+                                       datasource="userDs"
+                                       property="group"/>
+                                <field datasource="userDs"
+                                       ext:index="3"
+                                       property="defaultCountry"/>
+                            </column>
+                        </fieldGroup>
+                    </row>
+                </rows>
+            </grid>
+        </groupBox>
+    </layout>
+</window>
