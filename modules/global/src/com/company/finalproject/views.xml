@@ -46,4 +46,16 @@
         <property name="prodYear"/>
         <property name="cost"/>
     </view>
+    <view class="com.company.finalproject.entity.LegalCustomer"
+          extends="_minimal"
+          name="legalCustomer-view">
+        <property name="name"/>
+        <property name="phone"/>
+    </view>
+    <view class="com.company.finalproject.entity.PhysCustomer"
+          extends="_minimal"
+          name="physCustomer-view">
+        <property name="name"/>
+        <property name="phone"/>
+    </view>
 </views>

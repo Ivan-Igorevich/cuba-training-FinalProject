@@ -8,5 +8,10 @@
         <item screen="finalproject$VehicleModel.browse"/>
         <item screen="finalproject$Vehicle.browse"/>
         <item screen="finalproject$VehicleComplectation.browse"/>
+        <item screen="finalproject$Customer.browse"/>
     </menu>
+    <item insertAfter="sec$ScreenHistory.browse"
+          screen="finalproject$LegalCustomer.edit"/>
+    <item insertAfter="finalproject$LegalCustomer.edit"
+          screen="finalproject$PhysCustomer.edit"/>
 </menu-config>

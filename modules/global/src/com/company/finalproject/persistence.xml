@@ -10,5 +10,8 @@
         <class>com.company.finalproject.entity.VehicleModel</class>
         <class>com.company.finalproject.entity.VehicleComplectation</class>
         <class>com.company.finalproject.entity.Vehicle</class>
+        <class>com.company.finalproject.entity.Customer</class>
+        <class>com.company.finalproject.entity.LegalCustomer</class>
+        <class>com.company.finalproject.entity.PhysCustomer</class>
     </persistence-unit>
 </persistence>

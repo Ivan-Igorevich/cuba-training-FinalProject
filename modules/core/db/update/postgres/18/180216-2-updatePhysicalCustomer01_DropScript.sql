@@ -1,0 +1,9 @@
+alter table FINALPROJECT_PHYSICAL_CUSTOMER drop column VERSION__UNUSED cascade ;
+alter table FINALPROJECT_PHYSICAL_CUSTOMER drop column CREATE_TS__UNUSED cascade ;
+alter table FINALPROJECT_PHYSICAL_CUSTOMER drop column CREATED_BY__UNUSED cascade ;
+alter table FINALPROJECT_PHYSICAL_CUSTOMER drop column UPDATE_TS__UNUSED cascade ;
+alter table FINALPROJECT_PHYSICAL_CUSTOMER drop column UPDATED_BY__UNUSED cascade ;
+alter table FINALPROJECT_PHYSICAL_CUSTOMER drop column DELETE_TS__UNUSED cascade ;
+alter table FINALPROJECT_PHYSICAL_CUSTOMER drop column DELETED_BY__UNUSED cascade ;
+alter table FINALPROJECT_PHYSICAL_CUSTOMER drop column NAME__UNUSED cascade ;
+alter table FINALPROJECT_PHYSICAL_CUSTOMER drop column PHONE__UNUSED cascade ;

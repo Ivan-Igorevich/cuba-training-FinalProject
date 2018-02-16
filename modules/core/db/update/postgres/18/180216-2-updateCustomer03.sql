@@ -1,0 +1,1 @@
+create unique index IDX_FINALPROJECT_CUSTOMER_UK_INN on FINALPROJECT_CUSTOMER (INN) where DELETE_TS is null ;

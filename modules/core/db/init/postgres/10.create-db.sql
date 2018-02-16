@@ -113,3 +113,31 @@ create table FINALPROJECT_VEHICLE (
     primary key (ID)
 )^
 -- end FINALPROJECT_VEHICLE
+-- begin FINALPROJECT_LEGAL_CUSTOMER
+-- end FINALPROJECT_LEGAL_CUSTOMER
+-- begin FINALPROJECT_PHYSICAL_CUSTOMER
+-- end FINALPROJECT_PHYSICAL_CUSTOMER
+-- begin FINALPROJECT_CUSTOMER
+create table FINALPROJECT_CUSTOMER (
+    ID uuid,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    DTYPE varchar(100),
+    --
+    NAME varchar(255) not null,
+    PHONE varchar(255) not null,
+    --
+    -- from finalproject$PhysCustomer
+    EMAIL varchar(255),
+    --
+    -- from finalproject$LegalCustomer
+    INN varchar(20),
+    --
+    primary key (ID)
+)^
+-- end FINALPROJECT_CUSTOMER

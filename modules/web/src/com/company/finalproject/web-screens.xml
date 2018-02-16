@@ -27,4 +27,12 @@
             template="com/company/finalproject/web/vehicle/vehicle-edit.xml"/>
     <screen id="finalproject$VehicleComplectation.browse"
             template="com/company/finalproject/web/vehiclecomplectation/vehicle-complectation-browse.xml"/>
+    <screen id="finalproject$Customer.edit"
+            template="com/company/finalproject/web/customer/customer-edit.xml"/>
+    <screen id="finalproject$Customer.browse"
+            template="com/company/finalproject/web/customer/customer-browse.xml"/>
+    <screen id="finalproject$LegalCustomer.edit"
+            template="com/company/finalproject/web/legalcustomer/legal-customer-edit.xml"/>
+    <screen id="finalproject$PhysCustomer.edit"
+            template="com/company/finalproject/web/physcustomer/phys-customer-edit.xml"/>
 </screen-config>
