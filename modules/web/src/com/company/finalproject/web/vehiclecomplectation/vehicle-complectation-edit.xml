@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.finalproject.web.vehiclecomplectation.VehicleComplectationEdit"
+        datasource="vehicleComplectationDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.finalproject.web.vehiclecomplectation">
+    <dsContext>
+        <datasource id="vehicleComplectationDs"
+                    class="com.company.finalproject.entity.VehicleComplectation"
+                    view="vehicleComplectation-view"/>
+    </dsContext>
+    <dialogMode forceDialog="true"
+                height="AUTO"
+                modal="true"
+                width="600"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="vehicleComplectationDs">
+            <column width="250px">
+                <field property="name"/>
+                <field property="cost"/>
+                <field property="type"/>
+                <field property="comment"
+                       rows="5"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

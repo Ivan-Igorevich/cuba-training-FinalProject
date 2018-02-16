@@ -4,5 +4,9 @@
           insertBefore="administration">
         <item screen="finalproject$Country.browse"/>
         <item screen="finalproject$AutoProducer.browse"/>
+        <item screen="finalproject$Color.browse"/>
+        <item screen="finalproject$VehicleModel.browse"/>
+        <item screen="finalproject$Vehicle.browse"/>
+        <item screen="finalproject$VehicleComplectation.browse"/>
     </menu>
 </menu-config>

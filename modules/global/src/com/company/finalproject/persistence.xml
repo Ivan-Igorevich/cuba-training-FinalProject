@@ -6,5 +6,9 @@
         <class>com.company.finalproject.entity.Country</class>
         <class>com.company.finalproject.entity.AutoProducer</class>
         <class>com.company.finalproject.entity.ExtUser</class>
+        <class>com.company.finalproject.entity.Color</class>
+        <class>com.company.finalproject.entity.VehicleModel</class>
+        <class>com.company.finalproject.entity.VehicleComplectation</class>
+        <class>com.company.finalproject.entity.Vehicle</class>
     </persistence-unit>
 </persistence>

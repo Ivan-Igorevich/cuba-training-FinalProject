@@ -1,0 +1,2 @@
+create unique index IDX_FINALPROJECT_COLOR_UK_CODE on FINALPROJECT_COLOR (CODE) where DELETE_TS is null ;
+create unique index IDX_FINALPROJECT_COLOR_UK_NAME on FINALPROJECT_COLOR (NAME) where DELETE_TS is null ;

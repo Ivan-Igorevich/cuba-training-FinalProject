@@ -8,6 +8,7 @@ import com.haulmont.cuba.core.Persistence;
 import com.haulmont.cuba.core.global.DataManager;
 import com.haulmont.cuba.core.global.Metadata;
 import com.haulmont.cuba.core.global.View;
+import com.haulmont.cuba.security.entity.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,19 +18,26 @@ import javax.inject.Inject;
 public class DefaultCountryServiceBean implements DefaultCountryService {
 
     @Inject
-    Persistence persistence;
+    private Persistence persistence;
     @Inject
     private Metadata metadata;
 
     @Override
     @Transactional
-    public Country getDefaultCountry(ExtUser user) {
+    public Country getDefaultCountry(User user) {
         EntityManager entityManager = persistence.getEntityManager();
 
         MetaClass metaClass = metadata.getSession().getClass("finalproject$ExtUser");
         View view = metadata.getViewRepository().getView(metaClass, "extUser-view");
+        ExtUser u;
+        try {
+            u = (ExtUser) user;
+        } catch (ClassCastException e) {
+            System.out.println("Admin user has no extensions");
+            return null;
+        }
 
-        user = entityManager.find(ExtUser.class, user.getId(), view);
-        return user.getDefaultCountry();
+        u = entityManager.find(ExtUser.class, u.getId(), view);
+        return u != null ? u.getDefaultCountry() : null;
     }
 }

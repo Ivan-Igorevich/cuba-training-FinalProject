@@ -12,6 +12,8 @@
             <map>
                 <entry key="finalproject_DefaultCountryService"
                        value="com.company.finalproject.service.DefaultCountryService"/>
+                <entry key="finalproject_CountModelsService"
+                       value="com.company.finalproject.service.CountModelsService"/>
             </map>
         </property>
     </bean>

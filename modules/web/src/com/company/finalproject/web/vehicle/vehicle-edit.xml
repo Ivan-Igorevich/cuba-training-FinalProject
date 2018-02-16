@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.finalproject.web.vehicle.VehicleEdit"
+        datasource="vehicleDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.finalproject.web.vehicle">
+    <dsContext>
+        <datasource id="vehicleDs"
+                    class="com.company.finalproject.entity.Vehicle"
+                    view="vehicle-view">
+            <datasource id="modelDs"
+                        property="model"/>
+            <datasource id="complectationDs"
+                        property="complectation"/>
+        </datasource>
+        <datasource id="autoProducerDs"
+                    class="com.company.finalproject.entity.AutoProducer"
+                    view="autoProducer-view"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="vehicleDs">
+            <column width="250px">
+                <field property="producer"/>
+                <field property="model"/>
+                <field property="complectation"/>
+                <field editable="false"
+                       property="fullName"/>
+                <field property="prodYear"/>
+                <field property="cost"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

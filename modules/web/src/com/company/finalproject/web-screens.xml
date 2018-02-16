@@ -11,4 +11,20 @@
             template="com/company/finalproject/web/autoproducer/auto-producer-browse.xml"/>
     <screen id="finalproject$AutoProducer.edit"
             template="com/company/finalproject/web/autoproducer/auto-producer-edit.xml"/>
+    <screen id="finalproject$Color.browse"
+            template="com/company/finalproject/web/color/color-browse.xml"/>
+    <screen id="finalproject$Color.edit"
+            template="com/company/finalproject/web/color/color-edit.xml"/>
+    <screen id="finalproject$VehicleModel.browse"
+            template="com/company/finalproject/web/vehiclemodel/vehicle-model-browse.xml"/>
+    <screen id="finalproject$VehicleModel.edit"
+            template="com/company/finalproject/web/vehiclemodel/vehicle-model-edit.xml"/>
+    <screen id="finalproject$VehicleComplectation.edit"
+            template="com/company/finalproject/web/vehiclecomplectation/vehicle-complectation-edit.xml"/>
+    <screen id="finalproject$Vehicle.browse"
+            template="com/company/finalproject/web/vehicle/vehicle-browse.xml"/>
+    <screen id="finalproject$Vehicle.edit"
+            template="com/company/finalproject/web/vehicle/vehicle-edit.xml"/>
+    <screen id="finalproject$VehicleComplectation.browse"
+            template="com/company/finalproject/web/vehiclecomplectation/vehicle-complectation-browse.xml"/>
 </screen-config>

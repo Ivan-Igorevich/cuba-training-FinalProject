@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.finalproject.web.vehiclecomplectation.VehicleComplectationBrowse"
+        focusComponent="vehicleComplectationsTable"
+        lookupComponent="vehicleComplectationsTable"
+        messagesPack="com.company.finalproject.web.vehiclecomplectation">
+    <dsContext>
+        <groupDatasource id="vehicleComplectationsDs"
+                         class="com.company.finalproject.entity.VehicleComplectation"
+                         view="vehicleComplectation-view">
+            <query>
+                <![CDATA[select e from finalproject$VehicleComplectation e
+                            where e.vehicleModel.name = :param$model.name
+                            and e.vehicleModel.producer.name = :param$model.producer.name]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="vehicleComplectationsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="vehicleComplectationsTable"
+                datasource="vehicleComplectationsDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="vehicleComplectationsTable"
+                    width="100%">
+            <actions>
+                <action id="create"
+                        openType="DIALOG"/>
+                <action id="edit"
+                        openType="DIALOG"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="cost"/>
+                <column id="type"/>
+                <column id="comment"/>
+            </columns>
+            <rows datasource="vehicleComplectationsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="vehicleComplectationsTable.create"/>
+                <button id="editBtn"
+                        action="vehicleComplectationsTable.edit"/>
+                <button id="removeBtn"
+                        action="vehicleComplectationsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

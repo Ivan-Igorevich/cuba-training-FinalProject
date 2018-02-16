@@ -23,4 +23,27 @@
         </property>
         <property name="code"/>
     </view>
+    <view class="com.company.finalproject.entity.VehicleModel"
+          extends="_minimal"
+          name="vehicleModel-view">
+        <property name="producer"
+                  view="autoProducer-view"/>
+        <property name="complectation"
+                  view="vehicleComplectation-view"/>
+    </view>
+    <view class="com.company.finalproject.entity.VehicleComplectation"
+          extends="_local"
+          name="vehicleComplectation-view"/>
+    <view class="com.company.finalproject.entity.Vehicle"
+          extends="_minimal"
+          name="vehicle-view">
+        <property name="producer"
+                  view="autoProducer-view"/>
+        <property name="model"
+                  view="vehicleModel-view"/>
+        <property name="complectation"
+                  view="vehicleComplectation-view"/>
+        <property name="prodYear"/>
+        <property name="cost"/>
+    </view>
 </views>

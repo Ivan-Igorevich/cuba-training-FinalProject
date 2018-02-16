@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.finalproject.web.vehiclemodel.VehicleModelEdit"
+        datasource="vehicleModelDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.finalproject.web.vehiclemodel">
+    <dsContext>
+        <datasource id="vehicleModelDs"
+                    class="com.company.finalproject.entity.VehicleModel"
+                    view="vehicleModel-view">
+            <collectionDatasource id="complectationDs"
+                                  property="complectation"/>
+        </datasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="vehicleModelDs">
+            <column width="250px">
+                <field property="name"/>
+                <field property="producer"/>
+            </column>
+        </fieldGroup>
+        <groupBox id="complectationBox"
+                  caption="msg://com.company.finalproject.entity/VehicleModel.complectation">
+            <table id="complectationTable"
+                   height="200px"
+                   width="100%">
+                <actions>
+                    <action id="create"/>
+                    <action id="edit"/>
+                    <action id="remove"/>
+                </actions>
+                <columns/>
+                <rows datasource="complectationDs"/>
+                <buttonsPanel>
+                    <button action="complectationTable.create"/>
+                    <button action="complectationTable.edit"/>
+                    <button action="complectationTable.remove"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>
